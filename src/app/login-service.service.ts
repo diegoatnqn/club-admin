@@ -2,7 +2,7 @@ import { Injectable } from "@angular/core";
 import { HttpClient, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from "@angular/common/http";
 import { Observable } from "rxjs";
 import * as moment from "moment";
-import IUsuario from './backend/interfaces/usuario';
+//import IUsuario from './backend/interfaces/usuario';
 
 @Injectable({
   providedIn: "root"
@@ -12,7 +12,8 @@ export class LoginService {
   constructor(private http: HttpClient) { }
 
   login(user: any) {
-    return this.http.post<IUsuario>("/usuario/login", user);
+    // Esto solo anda con backend andando
+    //return this.http.post<IUsuario>("/usuario/login", user);
   }
 
   public setSession(authResult) {
