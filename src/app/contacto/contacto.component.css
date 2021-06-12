@@ -1,0 +1,19 @@
+#enviarButton:focus{
+    background-color:darkgreen;
+}
+btn{
+    margin-top:3rem;
+}
+container{
+    padding-top:4rem;
+}
+@media screen and (max-width:496px){
+    form{
+        display:inline;
+    }
+}
+@media screen and (max-heigth:720px) {
+  section{
+      height:calc(1.2*100vh)
+  }
+}

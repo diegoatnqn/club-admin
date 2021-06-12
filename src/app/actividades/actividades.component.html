@@ -1,0 +1,78 @@
+<section id="actividades">
+  <div id="actividades" class="bg-light" style="text-align:center">
+    <p class="display-4" style="margin-bottom:3%;display:inline-block"> Nuestras actividades</p>
+
+    <div class="container">
+      <ul class="nav nav-tabs bg-primary justify-content-center" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="esc-sab-tab" data-toggle="tab" href="#esc-sab" role="tab"
+             aria-controls="esc-sab" aria-selected="true">Clase principal</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" id="ja-tab" data-toggle="tab" href="#culto-joven" role="tab"
+             aria-controls="culto-joven" aria-selected="false">Adultos jovenes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="otras-clases-tab" data-toggle="tab" href="#otras-clases" role="tab"
+             aria-controls="otras-clases" aria-selected="false">Otras clases</a>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="esc-sab" role="tabpanel" aria-labelledby="esc-sab-tab">
+          <div class="card">
+            <div class="card-header">
+              <p class="h6">Clases por Zoom</p>
+            </div>
+            <div class="card-body">
+              <img class="img-fluid img-thumbnail" src="assets/tarjetazoom.jpg" />
+              <h5 class="card-title">Escuela</h5>
+              <p class="card-text">Todos los ___ 9hs.</p>
+              <a class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">ENTRAR</a>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="culto-joven" role="tabpanel" aria-labelledby="ja-tab">
+          <div class="card-header">
+            <p class="h6">Adultos Jovenes por Zoom o Youtube</p>
+          </div>
+          <div class="card-body">
+            <img class="img-fluid img-thumbnail" src="assets/tarjetaculto.jpg" />
+            <h5 class="card-title">Participa por zoom o Youtube</h5>
+            <p class="card-text">Entra al canal o pedí entrar a la sala.</p>
+            <a href="http://youtube.com" target="_blank" class="btn btn-primary">Entrar</a>
+            <a class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Pedir</a>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="otras-clases" role="tabpanel" aria-labelledby="otras-clases-tab">
+          <div class="card-header">
+            <p class="h4">Todavia no hay otras clases</p>
+          </div>
+          <div class="card-body">
+            <a id="botonotrasclases" class="btn btn-outline-primary">Entrar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Contacto -->
+  <div class="modal fade bd-example-modal-sm" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Proceder a la pagina de contacto</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Presione IR para ir a la pagina de contacto
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" (click)="reqContacto()" class="btn btn-success" data-dismiss="modal">IR</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

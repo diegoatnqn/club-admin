@@ -1,0 +1,18 @@
+<section id="nosotros" class="seccion">
+
+    <div class="row" style="display:flex">
+      <div class="col-sm-7" >
+        <img class="img-fluid" src="assets/fondo1.jpg" alt="generico prueba" />
+      </div>
+      <div class="col-sm-5">
+        <h2 class="featurette-heading"> Nosotros somos los mejores</h2>
+        <p class="lead"> Breve descricpions</p>
+        <div class="row">
+          <div *ngFor="let image of album; let i=index" style="display:inline-block" class="col-4">
+            <img [src]="image.src" (click)="open(i)" class="img-fluid" style="max-height:100px;" />
+          </div>
+        </div>
+      </div>
+    </div>
+  
+</section>

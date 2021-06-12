@@ -1,0 +1,153 @@
+<section id="login" *ngIf="!loggedInCorrect">
+  <div class="container">
+    <a href="/">Return</a>
+    <div class="alert alert-danger" role="alert" *ngIf="unsatisfiedLogin">
+      Please insert valid data
+    </div>
+    <div class="alert alert-danger" role="alert" *ngIf="sessionExpired">
+      Session expired!!
+    </div>
+    <div class="login">
+      <form method="post">
+        <h1>Admin Login</h1>
+        <div class="form-group">
+          <label for="miEmail"></label>
+          <input type="email"
+                 [(ngModel)]="email"
+                 name="email"
+                 placeholder="Email"
+                 required="required"
+                 id="miEmail"
+                 class="form-control" />
+        </div>
+        <div class="form-group">
+          <input type="password"
+                 [(ngModel)]="password"
+                 name="password"
+                 placeholder="Password"
+                 required="required"
+                 class="form-control" />
+        </div>
+        <button class="btn btn-info" type="submit" (click)="login()">Log in</button>
+      </form>
+    </div>
+  </div>
+
+</section>
+<section id="bienvenido" style="margin:4rem 0 0 0;" *ngIf="loggedInCorrect">
+  <div class="admin">
+    <a href="/" class="link-salir" (click)="logout()">Log Out</a>
+    <h1>Admin</h1>
+  </div>
+  <!-- Navegacion Administrador -->
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <a class="nav-item nav-link active" id="anadir-noticia-tab" data-toggle="tab" href="#anadirNoticia" role="tab" aria-controls="anadirNoticia" aria-selected="true">Add New</a>
+      <a class="nav-item nav-link" id="ver-consultas-tab" data-toggle="tab" href="#verConsultas" role="tab" aria-controls="verConsultas" aria-selected="false">Check inquiries</a>
+      <a class="nav-item nav-link" id="ver-noticias-tab" data-toggle="tab" href="#verNoticias" role="tab" aria-controls="verNoticias" aria-selected="false">Check news</a>
+    </div>
+  </nav>
+
+  <!-- Contenido -->
+  <div class="tab-content" id="nav-tabContent">
+    <!-- Nuevo boton añadir noticia -->
+    <div class="tab-pane fade show active" id="anadirNoticia" role="tabpanel" aria-labelledby="nav-home-tab">
+      <div class="login mt-2">
+        <form>
+          <h2>Agregar Noticia</h2>
+          <div class="alert alert-danger" role="alert" *ngIf="unsatisfiedNewPost">
+            Ingrese datos validos
+          </div>
+
+          <div class="form-group">
+            <label for="nuevoTitulo">Title</label>
+            <input type="text"
+                   [(ngModel)]="tituloNoticia"
+                   name="titulo"
+                   placeholder="Titulo"
+                   required="required" id="nuevoTitulo"
+                   class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="nuevoCuerpo"> Description</label>
+            <textarea [(ngModel)]="descripcionNoticia" name="cuerpo" placeholder="Descripcion" required="required" id="nuevoCuerpo"
+                      class="form-control" rows="4">
+            </textarea>
+          </div>
+          <fieldset class="form-group">
+
+            <label>Upload Cover:</label>
+            {{imageError}}
+            <div class="custom-file fileInputProfileWrap">
+              <input type="file" (change)="fileChangeEvent($event)" class="fileInputProfile">
+              <button class="btn btn-danger btn-sm" (click)="removeImage()" *ngIf="isImageSaved">Delete Image</button>
+              <div class="img-space" style="display:flex;">
+
+                <ng-container *ngIf="isImageSaved">
+                  <img [src]="cardImageBase64" />
+                </ng-container>
+              </div>
+            </div>
+          </fieldset>
+          <button class="btn btn-info" type="submit" (click)="addNews()" id="botonAnadirNoticia">Add!</button>
+
+        </form>
+      </div>
+    </div>
+    <!-- Tabla ver Consulstas -->
+    <div class="tab-pane fade" id="verConsultas" role="tabpanel" aria-labelledby="nav-profile-tab">
+      <h3>List of inquiries</h3>
+      <button type="button" class="btn btn-primary btn-sm" (click)="getConsultas()">reload</button>
+      <div class="container">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Motivo</th>
+              <th>Mensaje</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let c of consultasTabla">
+            <tr>
+              <td>{{c.nombre}}</td>
+              <td>{{c.email}}</td>
+              <td>{{c.motivo}}</td>
+              <td>{{c.descripcion}}</td>
+              <td>
+                <button class="btn btn-danger" type="submit" (click)="deleteConsultas(c._id)">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!--Tabla ver Noticias-->
+    <div class="tab-pane fade" id="verNoticias" role="tabpanel" aria-labelledby="nav-contact-tab">
+      <h3>List of news</h3>
+      <button type="button" class="btn btn-primary btn-sm" (click)="getNews()">reload</button>
+      <div class="container">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Description</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let n of noticiasTabla">
+            <tr>
+              <td>{{n.titulo}}</td>
+              <td>{{n.cuerpo}}</td>
+              <td>
+                <button class="btn btn-danger" type="submit" (click)="deleteNews(n._id)">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</section>

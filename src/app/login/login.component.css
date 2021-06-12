@@ -1,0 +1,36 @@
+button{
+    float:right;
+}
+#botonAnadirNoticia:focus{
+    background-color:lightgreen;
+}
+.btn-grout button{
+    margin:1rem;
+}
+.container{
+    padding:3% 0;
+}
+.link-salir{
+    cursor:pointer;
+}
+.link-salir:hover{
+    color:red;
+}
+@media screen and (max-width:512px){
+    .container{
+        padding:5% 2%;
+        overflow:auto;
+    }
+}
+.tab-content{
+    padding:3%;
+}
+.admin{
+    padding:3%;
+}
+nav {
+  margin: 0 2rem;
+}
+section{
+    margin:1rem 0 0 0 !important;
+}

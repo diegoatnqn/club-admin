@@ -1,0 +1,51 @@
+<section id="contacto" class="seccion">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <p class="display-4">Contácenos</p>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+        <a class="btn btn-info btn-block" (click)="toggleForm()">Contactar</a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <!-- Alerta-->
+        <div class="alert alert-success" role="alert" *ngIf="contactoCorrecto">
+          Contacto Realizado! Muchas Gracias.
+        </div>
+        <!-- Formulario -->
+        <form *ngIf="formOpen" style="margin-top:2rem" action="/send" method="post">
+          <div class="form-group row">
+            <label for="nombre" class="col-sm-2 col-form-label">Nombre</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="nombre" placeholder="Nombre" name="nombre" [(ngModel)]="nombre">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="email" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" id="email" placeholder="Email..." name="email" [(ngModel)]="email">
+            </div>
+          </div>
+          <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Motivo (Opcional)</label>
+          <select name="motivo" class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" [(ngModel)]="motivo">
+            <option value="zoomES">Acceso zoom</option>
+            <option value="zoomJA">Acceso zoom secundario</option>
+            <option value="difusionWA">Noticias por Whatsapp</option>
+          </select>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Mensaje</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="descripcion" [(ngModel)]="descripcion"></textarea>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-10">
+              <button type="submit" class="btn btn-primary" (click)="crearConsulta()" id="enviarButton">Enviar</button>
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </div>
+    </div>
+</section>
+<!-- Modal -->

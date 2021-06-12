@@ -1,0 +1,59 @@
+
+section{
+    background-image:url(../../assets/fondo.jpg);
+    background-size:cover;
+    display:inline-block;
+}
+.jumbotron {
+  background-color: rgba(255, 252, 252, 0.20);
+  display: flex;
+  position: relative;
+  text-align: center;
+  margin-top: 18%;
+}
+footer {
+  width: 100%;
+  padding-top:25px;
+  color:#222
+}
+a {
+  font-size: x-large;
+  color: ghostwhite;
+  text-shadow:1.3px 1.3px black;
+}
+a:link{
+    text-decoration:none;
+}
+a:focus{
+    color:gold;
+}
+.col{
+    padding:15px;
+}
+.col:hover {
+  background-color: rgba(251, 247, 247, 0.22);
+  color:black;
+  text-shadow:1px 1px 1px white;
+}
+  .col:hover a {
+    color: black;
+    text-shadow: 1.2px 1.2px lightgoldenrodyellow;
+  }
+.display-2 {
+    font-size:5rem;
+  text-shadow: 1.5px 1.5px floralwhite;
+}
+footer a{
+    text-decoration:none;
+    text-shadow:none;
+    color:initial;
+    font-size:initial;
+    cursor:pointer;
+}
+.red {
+  padding: 5px;
+  text-align: center;
+}
+.redes-footer{
+    display:flex;
+}

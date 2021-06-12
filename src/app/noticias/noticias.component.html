@@ -1,0 +1,13 @@
+<section id="noticias-principal">
+  <p class="display-4" style="text-align:center">Ultimas Noticias</p>
+  <div class="container">
+      <div class="card" *ngFor="let n of misNoticias">
+        <img class="card-img-top" [src]="n.cover" alt="Card image cap">
+        <div class="card-body text-center">
+          <h3 class="card-title">{{n.titulo}}</h3>
+          <p class="card-text">{{n.cuerpo}}</p>
+        </div>
+      </div>
+    
+  </div>
+</section>
