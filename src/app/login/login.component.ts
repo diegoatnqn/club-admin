@@ -34,21 +34,22 @@ export class LoginComponent implements OnInit {
     }
 
   login() {   //INICIAR SESION
-    const user = { email: this.email, password: this.password };
-    this.loginService.login(user).subscribe((data) => {
-      if (data) {
-        this.loggedInCorrect = true;                      //INICIO CORRECTO
-        this.loginService.setSession(data);
-        this.router.navigateByUrl('login');
-        this.getNews();
-        this.getConsultas();
-      } else {  //Login falso
-        this.unsatisfiedLogin = true;
-        this.dismiss();
-        this.email = "";
-        this.password = "";
-      }
-    });
+    //const user = { email: this.email, password: this.password };
+    //this.loginService.login(user).subscribe((data) => {
+    //  if (data) {
+    //    this.loggedInCorrect = true;                      //INICIO CORRECTO
+    //    this.loginService.setSession(data);
+    //    this.router.navigateByUrl('login');
+    //    this.getNews();
+    //    this.getConsultas();
+    //  } else {  //Login falso
+    //    this.unsatisfiedLogin = true;
+    //    this.dismiss();
+    //    this.email = "";
+    //    this.password = "";
+    //  }
+    //});
+    return true;
     
   }
   logout() {
@@ -56,29 +57,30 @@ export class LoginComponent implements OnInit {
     this.router.navigateByUrl('/login');
   }
   addNews() {
-    if (this.loginService.isLoggedIn()) {
-      const noticia = {                     //CREO LA NOTICIA
-        titulo: this.tituloNoticia,
-        cuerpo: this.descripcionNoticia,
-        cover: this.cardImageBase64
-      };
-      this.noticiasService.crear(noticia).subscribe((data) => {   // Y ENVIO A SERVICIO
-        console.log("DATA CREAR NOTICIA: " + data);
-      });
-      this.getNews();       //RESET de variables
-      this.tituloNoticia = '';
-      this.descripcionNoticia = '';
-      this.cardImageBase64 = '';
-      this.removeImage();
-    } else {                    //Si no ha iniciado sesion
-      this.logout();
-      this.tituloNoticia = '';
-      this.descripcionNoticia = '';
-      this.cardImageBase64 = '';
-      this.removeImage();
-      this.sessionExpired = true;
-      this.loggedInCorrect = false;
-    }
+  //  if (this.loginService.isLoggedIn()) {
+  //    const noticia = {                     //CREO LA NOTICIA
+  //      titulo: this.tituloNoticia,
+  //      cuerpo: this.descripcionNoticia,
+  //      cover: this.cardImageBase64
+  //    };
+  //    this.noticiasService.crear(noticia).subscribe((data) => {   // Y ENVIO A SERVICIO
+  //      console.log("DATA CREAR NOTICIA: " + data);
+  //    });
+  //    this.getNews();       //RESET de variables
+  //    this.tituloNoticia = '';
+  //    this.descripcionNoticia = '';
+  //    this.cardImageBase64 = '';
+  //    this.removeImage();
+  //  } else {                    //Si no ha iniciado sesion
+  //    this.logout();
+  //    this.tituloNoticia = '';
+  //    this.descripcionNoticia = '';
+  //    this.cardImageBase64 = '';
+  //    this.removeImage();
+  //    this.sessionExpired = true;
+  //    this.loggedInCorrect = false;
+  return true
+    
   }
   dismiss() {
     setTimeout(() => {
