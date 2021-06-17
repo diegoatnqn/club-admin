@@ -1,27 +1,56 @@
-# IgleAngular
+# Portal para tu organizacion
+<h3> <a href="https://club-admin.vercel.app">DEMO</a></h3>
+<hr>
+<br>
+<br>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
+## :small_blue_diamond: Portada con acceso a diferentes secciones
+<br>
 
-## Development server
+<a href="https://ibb.co/kqYG01r"><img src="https://i.ibb.co/L94065q/inicio.png" alt="inicio" border="0"></a>
+<br />
+<br>
+## :small_blue_diamond: Mostra tus actividades 
+  <br>
+  <br>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+<a href="https://ibb.co/8XR8sBn"><img src="https://i.ibb.co/N7kYC3g/slide.png" alt="slide" border="0"></a>
+<a href="https://ibb.co/hsJ5XLh"><img src="https://i.ibb.co/XXrByjN/slide2.png" alt="slide2" border="0"></a><br /><a target='_blank' href='https://es.imgbb.com/'></a>
+<br />
+<br />
+<br />
 
-## Code scaffolding
+## :small_blue_diamond:   :newspaper: Publica tus ultimas noticias :newspaper:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<a href="https://ibb.co/86VzyM4"><img src="https://i.ibb.co/MML8zn5/noticias.png" alt="noticias" border="0"></a>
 
-## Build
+<br />
+<br />
+<br />
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## :small_blue_diamond:  :envelope: Lugar para que te contacten :iphone: 
+<br>
+<br>
+<a href="https://ibb.co/jVdBC58"><img src="https://i.ibb.co/rbgTBtQ/contacto.png" alt="contacto" border="0"></a>
 
-## Running unit tests
+<br />
+<hr />
+<br />
+<br />
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+##  :small_blue_diamond: :boom: Agrega , revisa contactos y noticias directo desde la página :boom:
+<br />
+<br />
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/y65bKry/agregar-Noticia.png" alt="agregar-Noticia" border="0" style="display=inline-block"></a>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/mhrdnmc/revisar-Contacto.png" alt="revisar-Contacto" border="0" style="display=inline-block"></a>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/3Sc0JdP/revisar-Noticias.png" alt="revisar-Noticias" border="0" style="display=inline-block"></a><br /><a target='_blank' href='https://es.imgbb.com/'></a><br />
+  <hr>
+  
+## Tecnologías utilizadas:
+✅ Angular
+✅ Node js
+✅ Express
+✅ MongoDB
+✅ Bootstrap
+<hr>
+<h3> <a href="https://club-admin.vercel.app">Visita la DEMO</a></h3>
